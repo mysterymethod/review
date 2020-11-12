@@ -44,6 +44,11 @@ const author = document.querySelector('#author');
 const job = document.querySelector('#job');
 const info = document.querySelector('#info');
 
+// select btn
+const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
+const randomBtn = document.querySelector('.random-btn');
+
 // set initial value
 let i = 0;
 
@@ -61,6 +66,15 @@ function showPerson(person) {
   job.textContent = item.job;
   info.textContent = item.text;
 }
+
+// when next button clicks
+nextBtn.addEventListener('click', function() {
+  i++;
+  if (i > reviews.length - 1) {
+    i = 0;
+  }
+  showPerson(i);
+});
 
     
 
