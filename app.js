@@ -48,16 +48,19 @@ const info = document.querySelector('#info');
 let i = 0;
 
 // load initial value
-
 window.addEventListener('DOMContentLoaded', function(){
-  const item = reviews[i];
+  showPerson(i);
+});
+
+// function to load a person's all details.
+function showPerson(person) {
+  const item = reviews[person];
 
   img.src = item.img;
   author.textContent = item.name;
   job.textContent = item.job;
   info.textContent = item.text;
-
-});
+}
 
     
 
